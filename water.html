@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Water Intake</title>
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+<div class="app-container">
+<header class="header">
+<div class="header-content">
+<div class="logo">
+<img src="https://images.unsplash.com/photo-1548839140-29a749e1a4b8?w=40&h=40&fit=crop&crop=face" alt="Water Tracker Logo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+<h1>Water Tracker</h1>
+</div>
+<nav class="nav">
+<a href="fitness.html" class="nav-btn">Dashboard</a>
+<a href="activity.html" class="nav-btn">Activity</a>
+<a href="bmi.html" class="nav-btn">BMI</a>
+<a href="water.html" class="nav-btn active">Water</a>
+<a href="progress.html" class="nav-btn">Progress</a>
+</nav>
+</div>
+</header>
+
+<main class="main-content">
+<div class="page active">
+<div class="page-header">
+<h2>Daily Water Intake</h2>
+<p>Stay hydrated throughout the day for optimal health</p>
+</div>
+
+<div class="water-tracker">
+<div class="water-display">
+<div class="water-icon">💧</div>
+<div class="water-info">
+<div class="water-count" id="water">0 Glasses</div>
+<div class="water-progress">
+<div class="progress-bar">
+<div class="progress-fill" id="waterProgress" style="width: 0%"></div>
+</div>
+<div class="progress-text">Goal: 8 glasses per day</div>
+</div>
+</div>
+</div>
+
+<div class="water-actions">
+<div class="water-input-section">
+<div class="water-input-group">
+<input type="number" id="customWater" min="1" max="20" placeholder="Glasses">
+<button class="btn-primary" onclick="addCustomWater()">Add Custom</button>
+</div>
+</div>
+
+<div class="water-quick-add">
+<p>Quick Add:</p>
+<div class="quick-buttons">
+<button class="quick-btn" onclick="drinkWater()">+1</button>
+<button class="quick-btn" onclick="addWater(2)">+2</button>
+<button class="quick-btn" onclick="addWater(3)">+3</button>
+<button class="quick-btn" onclick="addWater(4)">+4</button>
+</div>
+</div>
+
+<button class="btn-secondary reset-btn" onclick="resetWater()">🔄 Reset Daily</button>
+</div>
+</div>
+</div>
+
+<div class="water-tips">
+<h3>Hydration Tips</h3>
+<div class="tips-grid">
+<div class="tip-card">
+<i>🌅</i>
+<h4>Morning</h4>
+<p>Start your day with a glass of water</p>
+</div>
+<div class="tip-card">
+<i>⚡</i>
+<h4>Before Meals</h4>
+<p>Drink water 30 minutes before eating</p>
+</div>
+<div class="tip-card">
+<i>🏃</i>
+<h4>Exercise</h4>
+<p>Stay hydrated during workouts</p>
+</div>
+<div class="tip-card">
+<i>🌙</i>
+<h4>Evening</h4>
+<p>Limit water intake before bedtime</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
