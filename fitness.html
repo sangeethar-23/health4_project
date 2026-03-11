@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FitTrack Dashboard</title>
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+<div class="app-container">
+<header class="header">
+<div class="header-content">
+<div class="logo">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=40&h=40&fit=crop&crop=face" alt="FitTrack Logo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+<h1>FitTrack</h1>
+</div>
+<nav class="nav">
+<a href="fitness.html" class="nav-btn active">Dashboard</a>
+<a href="activity.html" class="nav-btn">Activity</a>
+<a href="bmi.html" class="nav-btn">BMI</a>
+<a href="water.html" class="nav-btn">Water</a>
+<a href="progress.html" class="nav-btn">Progress</a>
+</nav>
+</div>
+</header>
+
+<main class="main-content">
+<div class="page active">
+<div class="page-header">
+<h2>Welcome to FitTrack</h2>
+<p>Track your daily fitness activities and monitor your progress</p>
+</div>
+
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">👟</div>
+<div class="stat-content">
+<h3>Steps</h3>
+<div class="stat-value" id="steps">0</div>
+<button class="stat-btn" onclick="addSteps()">+500 Steps</button>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">🔥</div>
+<div class="stat-content">
+<h3>Calories Burned</h3>
+<div class="stat-value" id="calories">0</div>
+<button class="stat-btn" onclick="addCalories()">+50 Calories</button>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">💧</div>
+<div class="stat-content">
+<h3>Water Intake</h3>
+<div class="stat-value" id="watercount">0 Glasses</div>
+</div>
+</div>
+</div>
+
+<div class="quick-actions">
+<h3>Quick Actions</h3>
+<div class="action-buttons">
+<button class="action-btn" onclick="window.location.href='activity.html'">📝 Log Activity</button>
+<button class="action-btn" onclick="window.location.href='bmi.html'">⚖️ Calculate BMI</button>
+<button class="action-btn" onclick="window.location.href='water.html'">💧 Add Water</button>
+<button class="action-btn" onclick="window.location.href='progress.html'">📊 View Progress</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
