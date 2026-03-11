@@ -152,4 +152,4 @@ visually appealing health monitoring interface**.
 **Your Name**
 
 **GitHub Repository:**\
-https://github.com/your-username/fittrack
+https://github.com/sangeethar-23/health4_project/blob/main/FitTrack_Professional_README.md
