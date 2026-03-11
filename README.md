@@ -1,6 +1,7 @@
 FitTrack - Smart Health & Activity Monitoring Web App
 
 Introduction
+
 FitTrack is a modern frontend web application designed to help users monitor their daily health activities and fitness progress. The application provides a clean and responsive interface that allows users to track activities, visualize health metrics, and maintain a healthier lifestyle through simple digital monitoring.
 
 The project focuses on creating an intuitive user experience using modern frontend technologies.
