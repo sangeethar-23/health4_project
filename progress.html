@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress</title>
+<link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+<div class="app-container">
+<header class="header">
+<div class="header-content">
+<div class="logo">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=40&h=40&fit=crop&crop=face" alt="Fitness Progress Logo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+<h1>Fitness Progress</h1>
+</div>
+<nav class="nav">
+<a href="fitness.html" class="nav-btn">Dashboard</a>
+<a href="activity.html" class="nav-btn">Activity</a>
+<a href="bmi.html" class="nav-btn">BMI</a>
+<a href="water.html" class="nav-btn">Water</a>
+<a href="progress.html" class="nav-btn active">Progress</a>
+</nav>
+</div>
+</header>
+
+<main class="main-content">
+<div class="page active">
+<div class="page-header">
+<h2>Your Fitness Progress</h2>
+<p>Visualize your daily fitness achievements and track your goals</p>
+</div>
+
+<div class="progress-charts">
+<h3>Today's Overview</h3>
+<div class="chart-container">
+<canvas id="progressChart"></canvas>
+</div>
+</div>
+
+<div class="progress-stats">
+<h3>Daily Statistics</h3>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">👟</div>
+<div class="stat-content">
+<h3>Total Steps</h3>
+<div class="stat-value" id="totalSteps">0</div>
+<p>Keep moving forward!</p>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">🔥</div>
+<div class="stat-content">
+<h3>Calories Burned</h3>
+<div class="stat-value" id="totalCalories">0</div>
+<p>Great job burning energy!</p>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">💧</div>
+<div class="stat-content">
+<h3>Water Intake</h3>
+<div class="stat-value" id="totalWater">0 Glasses</div>
+<p>Stay hydrated!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Update progress stats
+document.getElementById("totalSteps").innerText = localStorage.getItem("steps") || 0;
+document.getElementById("totalCalories").innerText = localStorage.getItem("calories") || 0;
+document.getElementById("totalWater").innerText = (localStorage.getItem("water") || 0) + " Glasses";
+
+// Chart configuration
+var ctx = document.getElementById("progressChart");
+
+new Chart(ctx, {
+type: "bar",
+data: {
+labels: ["Steps", "Calories", "Water"],
+datasets: [{
+label: "Today's Progress",
+data: [
+localStorage.getItem("steps") || 0,
+localStorage.getItem("calories") || 0,
+localStorage.getItem("water") || 0
+],
+backgroundColor: [
+'rgba(102, 126, 234, 0.8)',
+'rgba(240, 147, 251, 0.8)',
+'rgba(79, 172, 254, 0.8)'
+],
+borderColor: [
+'rgba(102, 126, 234, 1)',
+'rgba(240, 147, 251, 1)',
+'rgba(79, 172, 254, 1)'
+],
+borderWidth: 2
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+scales: {
+y: {
+beginAtZero: true
+}
+},
+plugins: {
+legend: {
+display: true,
+position: 'top'
+}
+}
+}
+});
+</script>
+
+</body>
+</html>
